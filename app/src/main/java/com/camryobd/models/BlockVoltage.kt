@@ -19,7 +19,7 @@ enum class CellStatus {
 }
 
 data class BatteryPackData(
-    val blocks: List<BlockVoltage>,
+    val blocks: List<BlockVoltage> = emptyList(),
     val avgVoltage: Double = 0.0,
     val maxVoltage: Double = 0.0,
     val minVoltage: Double = 0.0,
