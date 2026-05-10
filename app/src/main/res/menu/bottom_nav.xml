@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_connect" android:title="Connect" android:icon="@android:drawable/ic_menu_search" />
+    <item android:id="@+id/nav_dashboard" android:title="Dashboard" android:icon="@android:drawable/ic_menu_compass" />
+    <item android:id="@+id/nav_battery" android:title="Battery" android:icon="@android:drawable/ic_menu_gallery" />
+    <item android:id="@+id/nav_dtc" android:title="DTC" android:icon="@android:drawable/ic_menu_info_details" />
+</menu>

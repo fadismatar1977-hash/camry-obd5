@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1a2e"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Live Data"
+            android:textSize="22sp"
+            android:textColor="#00d2ff"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:id="@+id/dtc_warning_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#1a0000"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚠️"
+                android:textSize="20sp"
+                android:layout_marginEnd="10dp"/>
+            <TextView
+                android:id="@+id/dtc_warning_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fault Codes Detected!"
+                android:textColor="#ff3355"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="3">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:backgroundTint="#16213e"
+                app:cardCornerRadius="12dp">
+
+                <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⚡ RPM" android:textColor="#888" android:textSize="13sp" />
+                    <TextView android:id="@+id/rpm_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:textColor="#fff" android:textSize="28sp" android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:backgroundTint="#16213e"
+                app:cardCornerRadius="12dp">
+
+                <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🚗 Speed" android:textColor="#888" android:textSize="13sp" />
+                    <TextView android:id="@+id/speed_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:textColor="#0f0" android:textSize="28sp" android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:backgroundTint="#16213e"
+                app:cardCornerRadius="12dp">
+
+                <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🌡️ Coolant" android:textColor="#888" android:textSize="13sp" />
+                    <TextView android:id="@+id/coolant_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:textColor="#f80" android:textSize="28sp" android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:backgroundTint="#16213e"
+                app:cardCornerRadius="12dp">
+
+                <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔋 12V Batt" android:textColor="#888" android:textSize="13sp" />
+                    <TextView android:id="@+id/battery_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:textColor="#ff0" android:textSize="28sp" android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:backgroundTint="#16213e"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout android:orientation="horizontal" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⛽ Fuel" android:textColor="#888" android:textSize="13sp" />
+                    <TextView android:id="@+id/fuel_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:textColor="#fff" android:textSize="24sp" android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔧 Load" android:textColor="#888" android:textSize="13sp" />
+                    <TextView android:id="@+id/load_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:textColor="#fff" android:textSize="24sp" android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hybrid System"
+            android:textSize="20sp"
+            android:textColor="#00d2ff"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#0f3460"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HV Battery SOC" android:textColor="#888" android:textSize="12sp" />
+                        <TextView android:id="@+id/hv_soc_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:textColor="#0f0" android:textSize="32sp" android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HV Voltage" android:textColor="#888" android:textSize="12sp" />
+                        <TextView android:id="@+id/hv_voltage_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:textColor="#ff0" android:textSize="20sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+                
+                <LinearLayout android:orientation="horizontal" android:padding="16dp" android:paddingTop="0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HV Temp" android:textColor="#888" android:textSize="12sp" />
+                        <TextView android:id="@+id/hv_temp_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:textColor="#f80" android:textSize="20sp" android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="EV Driving %" android:textColor="#888" android:textSize="12sp" />
+                        <TextView android:id="@+id/ev_pct_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:textColor="#00ff88" android:textSize="20sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Performance"
+            android:textSize="20sp"
+            android:textColor="#00d2ff"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#3e1621"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout android:orientation="horizontal" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="⏱️ 0-100 km/h Timer" android:textColor="#ddd" android:textSize="16sp" />
+                <TextView android:id="@+id/timer_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:textColor="#fff" android:textSize="24sp" android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

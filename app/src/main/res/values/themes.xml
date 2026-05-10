@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.CamryOBD" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#0f3460</item>
+        <item name="colorPrimaryVariant">#16213e</item>
+        <item name="colorOnPrimary">#00d2ff</item>
+        <item name="colorSecondary">#00d2ff</item>
+        <item name="colorOnSecondary">#1a1a2e</item>
+        <item name="android:statusBarColor">#1a1a2e</item>
+        <item name="android:navigationBarColor">#16213e</item>
+    </style>
+</resources>
